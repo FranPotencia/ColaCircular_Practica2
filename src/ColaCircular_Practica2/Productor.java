@@ -35,12 +35,12 @@ public class Productor extends Thread {
                 System.out.println("Se ha acolado el número: " + aleatorio);
                 System.out.println("La cola contiene: " + lacola.GetNum() + " elementos");
                 System.out.println("El primer elemento es: " + lacola.Primero());
-                System.out.println("- - - - - - - - - - - -");
+                
                 Thread.sleep(2000);
             } catch (Exception ex) {
                 System.out.println(ex.getMessage());
             }
-
+               System.out.println("- - - - - - - - - - - -");
         }
     }
 }

@@ -32,8 +32,8 @@ public class ColaLenta implements ICola{
     }
 
     @Override
-    public void Acola(Object elemento) throws Exception {
-        
+    public synchronized void Acola(Object elemento) throws Exception {
+        Thread.sleep(100);
         if(!colallena()){
             
             Thread.sleep(100);
@@ -50,15 +50,14 @@ public class ColaLenta implements ICola{
     }
 
     @Override
-    public Object Desacola() throws Exception {
-        
+    public synchronized Object Desacola() throws Exception {
+        Thread.sleep(10);
         if(!colavacia()){
             
-            Thread.sleep(100);
             Object numdesacola=datos[head];
-            Thread.sleep(100);
+            Thread.sleep(10);
             head=(head+1)%capacidad;
-            Thread.sleep(100);
+            Thread.sleep(10);
             numelementos--;
             Thread.sleep(100);
             return numdesacola;

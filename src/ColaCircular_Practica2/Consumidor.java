@@ -40,6 +40,7 @@ public class Consumidor implements Runnable {
             } catch (Exception ex) {
                 Logger.getLogger(Consumidor.class.getName()).log(Level.SEVERE, null, ex);
             }
+            System.out.println("- - - - - - - - - - - -");
         }
     }
 }
